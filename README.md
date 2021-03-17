@@ -1,9 +1,9 @@
 # Certificação CKA - Dicas em Pt-Br
 Repositório com dicas para o exame CKA da Linux Foundation.
 
-Recentemente consegui passar na prova de certificação [CKA da Linux Foundation](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/). Realmente foi um desafio, além de ser uma prova com bastante conteudo, voce tem que provar na pratica seus conhecimentos. 
-Na Pratica Mesmo!!!
-A prova é composta por varios desafios que você precisa cumprir em 2h utilizando um ambiente real com um terminal e alguns clusters de K8S. No site oficial do exame tem um descritivo do ambiente, mas vou adiantar colocar aqui para vocês terem uma ideia de como é o ambiente.
+Recentemente consegui passar na prova de certificação [CKA da Linux Foundation](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/). Realmente foi um desafio, além de ser uma prova com bastante conteúdo, você tem que provar na prática seus conhecimentos. 
+Na Prática Mesmo!!!
+A prova é composta por vários desafios que você precisa cumprir em 2h utilizando um ambiente real com um terminal e alguns clusters de K8S. No site oficial do exame tem um descritivo do ambiente, mas vou colocar aqui para vocês terem uma ideia de como é o ambiente.
 
 
 Ambiente da Prova: [informações importantes](https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad)
@@ -19,19 +19,20 @@ Ambiente da Prova: [informações importantes](https://docs.linuxfoundation.org/
 | ek8s    | 1 master, 2 workers | flannel | k8s cluster |
 | ik8s    | 1 master, 1 base node | loopback | k8s cluster − missing worker node
 
-Além dos cluster da tabela acima, você irá se logar em uma estação (terminal) que dará acesso a todos os cluster, e é de lá que você irá efetuar a maior parte do trabalho.
+Além dos cluster da tabela acima, você irá usar uma estação (terminal) que dará acesso a todos os cluster, e é de lá que você irá efetuar a maior parte do trabalho.
 
-E como foi minha preparação. Li muitos documentos no [site oficial](https://kubernetes.io/docs/home/) e também vários blogs que se referem ao exame.
-Vou deixar uma lista de links e blogs de referencia no final.
+E como foi minha preparação. Li muitos documentos no [site oficial](https://kubernetes.io/docs/home/) e também vários blogs que se referem ao exame. Vou deixar uma lista de links e blogs de referência no final.
 
-Para estudar e ganhar mais conhecimento eu fiz a assinatura do portal [KodeKloud](https://kodekloud.com/) no plano anual por USD 19/m que com a conversão atual ficam R$1300 mais ou menos. Nossa muito dinheiro alguns vão dizer, porém além de acesso ao curso do CKA dentro do portal existe toda uma trilha de aprendizado para quem quer se especializar em Kubernetes e DevOps com treinamentos de Kubernetes, Docker, Git, Linux, Terraform, Ansible, OpenShift e outros, então na minha opinião vale cada centavo, mas se você está em um momento de grana curta o treinamento de CKA está disponivel no Udemy e muitas vezes conseguimos encontrar ele lá com descontos de até 93% (preço de hoje 15/03/2021 R$22.90 e preço original R$349.90 93% off).
-Nos dois treinamentos existem laboratorios que vão te ajudar a conhecer o Kubernetes e tudo que é necessario para não só passar no exame de certificação mas poder trabalhar como administrador de ambiente K8S.
-Antes da prova eu também comprei o simulado [Killer.sh](https://killer.sh), este simulado é muito mais dificil que a prova e possui todos os exercicios e tarefas necessarias que você precisa dominar para passar no exame.
+Para estudar e ganhar mais conhecimento eu fiz a assinatura do portal [KodeKloud](https://kodekloud.com/) no plano anual por USD 19/m que com a conversão atual ficam R$1300 mais ou menos. Nossa muito dinheiro alguns vão dizer, porém além de acesso ao curso do CKA dentro do portal existe toda uma trilha de aprendizado para quem quer se especializar em Kubernetes e DevOps com treinamentos de Kubernetes, Docker, Git, Linux, Terraform, Ansible, OpenShift e outros, então na minha opinião vale cada centavo, mas se você está em um momento de grana curta o treinamento de CKA está disponível no [Udemy](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/) e muitas vezes conseguimos encontrar descontos de até 93% (hoje 15/03/2021 o preço é R$22.90, já o preço original R$349.90. Economia de 93% off).
+Nos dois treinamentos existem laboratórios que vão te ajudar a conhecer o Kubernetes e tudo que é necessário para não só passar no exame de certificação, mas poder trabalhar como administrador de ambiente K8S.
+Antes da prova eu também comprei o simulado [Killer.sh](https://killer.sh), este simulado é muito mais difícil que a prova e possui todos os exercícios e tarefas necessárias que você precisa dominar para passar no exame.
+
+Minha rotina foi de estudar todos os dias, inclusive sabados e domingos por pelo menos 3h, então de segunda a sexta eu começava a estudar as 19:00hs e terminava as 22:00hs e aos finais de semana eu aproveitava que sempre me levanto muito cedo e começava a estudar as 08:00hs até 11:30hs e depois só retornava as 15:00hs até 19:00hs, parece muito puxado, mas na verdade com a situação de pandemia que estamos vivendo e sem sair de casa eu aproveitei o momento para dedicar aos estudos e não ficar vendo séries na Netflix ou jogando VG 😅. Importante também é entender e respeitar seus limites, muitas vezes me senti muito cansado ou até exausto ao final de um dia longo de trabalho, portanto nestes momento eu me dei o devido descanço, tomei uma IPA e coloquei algumas séries em dia.
 
 Ok chega de enrolação e vamos as dicas
 
 ## Dica 01 - Tenha sempre em mãos uma K8S para chamar de seu.
-Faça instalação local em seu computador pessoal ou de trabalho, o importante aqui é não precisar de uma infraestrutura complexa para treinar alguns comandos quando você tiver um tempo livre. Por facilidade e também pelo fato de já ter trabalhado com Docker-Desktop antes foi o que utilizei no meu laboratorio local, porém recomendo vocês a testarem as opções e utilizar a que achar mais facil e simples para você. 
+Faça instalação local em seu computador pessoal ou de trabalho, o importante aqui é não precisar de uma infraestrutura complexa para treinar alguns comandos quando você tiver um tempo livre. Por facilidade e pelo fato de já ter trabalhado com Docker-Desktop antes foi o que utilizei no meu laboratório local, porém recomendo vocês a testarem as opções e utilizar a que achar mais fácil e simples para você. 
 
 Algumas opções:
 - [Docker Desktop](https://www.docker.com/products/kubernetes)
@@ -47,21 +48,21 @@ Faça utilização da documentação, tudo que você precisa saber sobre K8S est
 - https://github.com/kubernetes/, 
 - https://kubernetes.io/blog/
 
-E nenhum outro dominio/site é permitido, inclusive o https://discuss.kubernetes.io/.
+E nenhum outro domínio/site é permitido, inclusive o https://discuss.kubernetes.io/.
 
-No [Github do Piotr](https://gist.github.com/Piotr1215/016ba7218a1a949574786fb9b92382c1) tem uma lista de links que voce pode salvar no seu favoritos e usar como referencia durante a prova para agilizar a busca por determinados assuntos. Eu fiz algumas modificações e adicionei alguns links no meu proprio arquivo de favoritos e vou deixar aqui para vocês decidirem qual preferem utilizar.
+No [GitHub do Piotr](https://gist.github.com/Piotr1215/016ba7218a1a949574786fb9b92382c1) tem uma lista de links que você pode salvar nos seus favoritos e usar como referência durante a prova para agilizar a busca por determinados assuntos. Eu fiz algumas modificações e adicionei alguns links no meu próprio arquivo de favoritos e vou deixar aqui para vocês decidirem qual preferem utilizar.
 
 ## Dica 03 - Conheça os atalhos do editor de texto
-Durante a prova você vai precisar usar muito editor de texto, muitas tarefas exigem que você crie e modifique arquivos YAML e você vai precisar saber utilizar um editor de texto e conhecer seus atalhos pode ser um grande aliado. O mais utilizado é o "vi" (vim), já li em alguns blogs que usam outros editores como "nano", mas eu utilizo o "vi" e recomendo. Algumas links para ajudar:
+Durante a prova você vai precisar usar muito editor de texto, muitas tarefas exigem que você crie e modifique arquivos YAML e você vai precisar saber utilizar um editor de texto e conhecer seus atalhos pode ser um grande aliado. O mais utilizado é o "vi" (vim), já li em alguns blogs que usam outros editores como "nano", mas eu utilizo o "vi" e recomendo. Alguns links para ajudar:
 - [Vim Cheat Sheet](https://vim.rtorr.com/lang/pt_br)
 - [Wikipedia Vi Editor](https://en.wikipedia.org/wiki/Vi)
-- [Github Vim](https://github.com/vim/vim)
+- [GitHub Vim](https://github.com/vim/vim)
 
-Eu já disse que você vai precisar editar muito texto! Bem não custa nada aviasr.
+Eu já disse que você vai precisar editar muito texto! Bem não custa nada avisar.
 
 ## Dica 04 - Crie atalhos e economize seu tempo
-Criar apelidos (alias) e variaveis no seu terminal irá te salvar um enorme tempo e economizar alguma digitação, e é claro diminuir a chance de algum "typo" erro.
-Além disso o kubectl (dica sobre kubectl mais a frente) permite você configurar a função de auto-completar que na pratica ajuda muito para finalizar de maneira mais rapida comandos no terminal.
+Criar apelidos (alias) e variáveis no seu terminal irá te salvar um enorme tempo e economizar alguma digitação, e é claro diminuir a chance de algum "typo" erro.
+Além disso o kubectl (dica sobre kubectl mais a frente) permite você configurar a função de autocompletar que na prática ajuda muito para finalizar de maneira mais rápida comandos no terminal.
 Veja detalhes em: [Kubectl autocomplete](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-autocomplete)
 
 Minha lista:
@@ -95,7 +96,7 @@ export ETCDCTL_API=3
 ```
 
 ## Dica 05 - Kubectl Modo Imperativo
-Existe um [blog](https://medium.com/faun/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443) só para ajudar em como se tornar "rapido" ao utilizar o kubectl. Em meu treinamento percebi que se tornar "rapido" com **kubectl** é só questão de tempo e familiaridade, pois quanto mais você treina, mais você conhece a ferramenta e mais rapido consegue executar tarefas. 
+Existe um [blog](https://medium.com/faun/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443) só para ajudar em como se tornar "rápido" ao utilizar o kubectl. Em meu treinamento percebi que se tornar "rápido" com **kubectl** é só questão de tempo e familiaridade, pois quanto mais você treina, mais você conhece a ferramenta e mais rápido consegue executar tarefas. 
 
 Muitas tarefas podem ser finalizadas de maneira imperativa, ou seja, somente usando o comando kubectl , porém vão existir tarefas que você começa com o modo imperativo e precisa terminar com o modo declarativo, quer dizer que você vai executar um comando que pode gerar um documento/manifesto tipo Json ou YAML (preferencialmente YAML) e aplicar as modificações solicitadas na tarefa.
 
@@ -186,25 +187,25 @@ vi nginx-pod-service.yaml
 Alguns dos comandos acima utilizei durante o exame e alguns até mais de uma vez. Veja mais exemplos no arquivo cka-dicas.txt, assim como exemplos de manifestos YAML que podem ajudar também durante seu exame.
 
 ## Dica 06 - Gerenciamento de tempo
-A prova é 100% "hands-on" com até 20 quetões e cada questão tem um peso (porcentagem diferente) e com duas (2) horas de duração, isso da aprox. 6 minutos para resolver cada tarefa, ou seja, gerenciamento de tempo é tão importante quanto dominar o **shell**.
+A prova é 100% "hands-on" com até 20 questões e cada questão tem um peso (porcentagem diferente) e com duas (2) horas de duração, isso dá aprox. 6 minutos para resolver cada tarefa, ou seja, gerenciamento de tempo é tão importante quanto dominar o **shell**.
 
-Como todas as questões tem pesos diferentes, não invista seu tempo em um desafio complexo com um peso igual ou menor que %4, marque a questão e vá resolver as questões com maior, ao final do exame você terá tempo suficiente para ir resolver as questões de menor peso, mas agora com mais tranquilidade pois as com maior reqpresentação na sua nota já foram resolvidas.
+Como todas as questões tem pesos diferentes, não invista seu tempo em um desafio complexo com um peso igual ou menor que %4, marque a questão e vá resolver as questões com maior, ao final do exame você terá tempo suficiente para ir resolver as questões de menor peso, mas agora com mais tranquilidade pois as com maior representação na sua nota já foram resolvidas.
 
-Não fique nervoso e nem se sinta preso em uma questão com peso maior, marque a questão e vá executar a proxima. Quando for fazer a revisão você vai investir tempo para resolver a tarefa e ler a documentação oficial.
+Não fique nervoso e nem se sinta preso em uma questão com peso maior, marque a questão e vá executar a próxima. Quando for fazer a revisão você vai investir tempo para resolver a tarefa e ler a documentação oficial.
 
-## Dica 07 - Fique calmo - \o/ cka tem segunda chance gratis
+## Dica 07 - Fique calmo - \o/ cka tem segunda chance grátis
 Fique calmo, você se preparou para o exame, treinou muitas e muitas vezes, portanto fique calmo 😉
-O exame possui uma nova tentativa em caso de falha gratuitamente, o que pode se tornar uma vantagem (meu caso), pois agora você conhece na pratica como é o exame, quais tipos de perguntas e vai conseguir controlar melhor o tempo em sua segunda tentativa, caso seja necessario.
+O exame possui uma nova tentativa em caso de falha gratuitamente, o que pode se tornar uma vantagem (meu caso), pois agora você conhece na pratica como é o exame, quais tipos de perguntas e vai conseguir controlar melhor o tempo em sua segunda tentativa, caso seja necessário.
 
-## Dica bonus
+## Dica bônus
 O ambiente do exame possui um terminal onde não funciona o Ctrl+C & Crtl+V, porém se você assim como eu utiliza o Windows, pode usar os atalhos: Ctrl+Insert para copiar e Shift+Insert para colar. (para outros sistemas operacionais ver no site: https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad para maiores informações). 
 
-Calma isso ainda não é a dica bonus, mas uma introdução para o que você pode fazer agora que sabe como usar o atalho Shift+Insert. 
+Calma isso ainda não é a dica bônus, mas uma introdução para o que você pode fazer agora que sabe como usar o atalho Shift+Insert. 
 
-O Windows 10 possui um tool chamado Clipboard que você pode usar com o atalho **"Windows logo key  + V"** uma vez que o "Clipboard tool" aparecer você pode fixar (usar um pin) em um determinado texto no histórico da área de transferência e utilizar/acessar este texto a qualquer momento apenas acionando o atalho "Windows logo key+V" e com isso não precisar decorar alguns comandos ou usar para suas variaveis como exemplo: "-o yaml --dry-run=client" onde você fixa este texo e depois vai somente acessando do seu historico a qualquer momento.
+O Windows 10 possui um tool chamado Clipboard que você pode usar com o atalho **"Windows logo key  + V"** uma vez que o "Clipboard tool" aparecer você pode fixar (usar um pin) em um determinado texto no histórico da área de transferência e utilizar/acessar este texto a qualquer momento apenas acionando o atalho "Windows logo key+V" e com isso não precisar decorar alguns comandos ou usar para suas variáveis como exemplo: "-o yaml --dry-run=client" onde você fixa este texto e depois vai somente acessando do seu histórico a qualquer momento.
 
 
-## Links & Referencias:
+## Links & Referências:
 | Nome | Autor |
 |------|-------| 
 | [Preparation and resources for CKA exam](https://medium.com/faun/preparation-and-resources-for-cka-exam-ca868fc678c9) | [Piotr](https://piotrzan.medium.com/) |
