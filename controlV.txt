@@ -1,0 +1,36 @@
+#CKAD 1.20
+sudo -i
+# Instalar os plugins kubectx (aka ctx) & kubens (aka ns)
+git clone https://github.com/ahmetb/kubectx /opt/kubectx
+ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
+ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+
+# Criar Alias e Variaveis
+#CONFIG_ALIAS_N_COMPLETION
+source <(kubectl completion bash)
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+complete -F __start_kubectl k
+alias k=kubectl
+alias kgp="kubectl get pods"
+alias kgs="kubectl get service"
+alias kd="kubectl delete"
+alias kcf="kubectl create -f"
+alias kaf="kubectl apply -f"
+alias kgpa="kubectl get pods -A"
+alias kg='kubectl get'
+alias ke='kubectl explain'
+alias cls=clear
+alias reload="systemctl daemon-reload"
+alias cluster='kubectl cluster-info'
+alias ctx=kubectx
+alias ns=kubens
+alias kube-cert="cd /etc/kubernetes/pki"
+alias etcd-cert="cd /etc/kubernetes/pki/etcd"
+alias manifest="cd /etc/kubernetes/manifests"
+export PATH=~/.kubectx:$PATH
+export do="-o yaml --dry-run=client"
+export sys="-n kube-system"
+export ETCDCTL_API=3
+
+
+
