@@ -189,9 +189,11 @@ Alguns dos comandos acima utilizei durante o exame e alguns até mais de uma vez
 ## Dica 06 - Gerenciamento de tempo
 A prova é 100% "hands-on" com até 20 questões e cada questão tem um peso (porcentagem diferente) e com duas (2) horas de duração, isso dá aprox. 6 minutos para resolver cada tarefa, ou seja, gerenciamento de tempo é tão importante quanto dominar o **shell**.
 
-Como todas as questões tem pesos diferentes, não invista seu tempo em um desafio complexo com um peso igual ou menor que %4, marque a questão e vá resolver as questões com maior, ao final do exame você terá tempo suficiente para ir resolver as questões de menor peso, mas agora com mais tranquilidade pois as com maior representação na sua nota já foram resolvidas.
+Como todas as questões tem pesos diferentes, não invista seu tempo em um desafio complexo com um peso igual ou menor que 4%, marque a questão e vá resolver as questões com maior peso, ao final do exame você terá tempo suficiente para ir resolver as questões de menor peso, mas agora com mais tranquilidade pois as com maior representação na sua nota já foram resolvidas.
 
 Não fique nervoso e nem se sinta preso em uma questão com peso maior, marque a questão e vá executar a próxima. Quando for fazer a revisão você vai investir tempo para resolver a tarefa e ler a documentação oficial.
+
+Utilize o notepad do simulado para fazer anotações, isso pode te ajudar a relembrar onde parou em uma determinada questão que não conseguiu terminar.
 
 ## Dica 07 - Fique calmo - \o/ cka tem segunda chance grátis
 Fique calmo, você se preparou para o exame, treinou muitas e muitas vezes, portanto fique calmo 😉
